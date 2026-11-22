@@ -1,0 +1,6 @@
+{
+  "name": "BLOCK RUSH 3D — Official Android Game",
+  "description": "Official website for BLOCK RUSH 3D by Block Rush Studios. Explore 3D block gameplay, verified features, official Android APK release details, and player support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
