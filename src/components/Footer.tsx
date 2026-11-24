@@ -1,16 +1,29 @@
 import { BRAND_INFO } from '../config/release';
 
-export function Footer() {
+interface FooterProps {
+  currentPage?: 'home' | 'how-to-play';
+}
+
+const BASE_URL = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+export function Footer({ currentPage = 'home' }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const contactHref = currentPage === 'home' ? '#support' : `${BASE_URL}#support`;
+  const howToPlayHref = `${BASE_URL}how-to-play/`;
 
   return (
     <footer className="bg-[#05070D] py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 border-b border-slate-800/80 pb-8 sm:flex-row sm:items-center">
           <div>
-            <p className="font-display text-lg font-bold tracking-tight text-white">
+            <a
+              href={currentPage === 'home' ? '#top' : BASE_URL}
+              className="font-display text-lg font-bold tracking-tight text-white transition-colors hover:text-sky-300"
+            >
               {BRAND_INFO.appName}
-            </p>
+            </a>
             <p className="mt-1 text-xs text-slate-400">
               {BRAND_INFO.developer}
               <span aria-hidden="true" className="mx-2 text-slate-600">
@@ -22,6 +35,12 @@ export function Footer() {
 
           <nav aria-label="Footer links" className="flex flex-wrap items-center gap-6 text-sm">
             <a
+              href={howToPlayHref}
+              className="font-medium text-slate-300 underline-offset-4 transition-colors hover:text-white hover:underline"
+            >
+              How to Play
+            </a>
+            <a
               href={BRAND_INFO.privacyPolicyUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -30,7 +49,7 @@ export function Footer() {
               Privacy Policy
             </a>
             <a
-              href="#support"
+              href={contactHref}
               className="font-medium text-slate-300 underline-offset-4 transition-colors hover:text-white hover:underline"
             >
               Contact

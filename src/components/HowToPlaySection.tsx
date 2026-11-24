@@ -41,12 +41,18 @@ const HOW_TO_PLAY_CARDS: GuideCard[] = [
   },
 ];
 
+const BASE_URL = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
 interface QuickLink {
   label: string;
   href: string;
+  isExternalPage?: boolean;
 }
 
 const RELATED_SECTIONS: QuickLink[] = [
+  { label: 'Full Gameplay Guide', href: `${BASE_URL}how-to-play/`, isExternalPage: true },
   { label: 'View Gameplay Screenshots', href: '#screenshots' },
   { label: 'Check Android Download Status', href: '#download' },
   { label: 'Read APK Install Guide', href: '#install-guide' },
@@ -142,8 +148,10 @@ export function HowToPlaySection() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(link.href);
+                      if (!link.isExternalPage) {
+                        e.preventDefault();
+                        scrollToSection(link.href);
+                      }
                     }}
                     className="inline-flex min-h-[36px] items-center gap-1.5 text-sm font-semibold text-sky-300 underline-offset-4 transition-colors hover:text-sky-200 hover:underline whitespace-nowrap"
                   >
