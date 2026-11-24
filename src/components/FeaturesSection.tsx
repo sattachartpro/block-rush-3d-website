@@ -110,6 +110,10 @@ export function FeaturesSection() {
                   <img
                     src={emblemArtwork}
                     alt="Faceted 3D neon cube artwork representing BLOCK RUSH 3D block design"
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                     onError={() => setEmblemError(true)}
                     className="aspect-square w-full object-cover"

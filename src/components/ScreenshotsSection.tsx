@@ -6,9 +6,16 @@ import { Reveal } from './Reveal';
 export function ScreenshotsSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const touchStartX = useRef<number | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const lastFocusedRef = useRef<HTMLElement | null>(null);
 
   const total = GAME_SCREENSHOTS.length;
   const activeShot = activeIndex !== null ? GAME_SCREENSHOTS[activeIndex] : null;
+
+  const openLightbox = useCallback((idx: number) => {
+    lastFocusedRef.current = document.activeElement as HTMLElement | null;
+    setActiveIndex(idx);
+  }, []);
 
   const goPrev = useCallback(() => {
     setActiveIndex((prev) => (prev === null ? null : (prev - 1 + total) % total));
@@ -20,6 +27,9 @@ export function ScreenshotsSection() {
 
   const closeLightbox = useCallback(() => {
     setActiveIndex(null);
+    window.requestAnimationFrame(() => {
+      lastFocusedRef.current?.focus();
+    });
   }, []);
 
   useEffect(() => {
@@ -27,6 +37,7 @@ export function ScreenshotsSection() {
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    closeButtonRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -106,7 +117,7 @@ export function ScreenshotsSection() {
             <Reveal key={shot.id} delay={Math.min(idx * 0.04, 0.24)}>
               <button
                 type="button"
-                onClick={() => setActiveIndex(idx)}
+                onClick={() => openLightbox(idx)}
                 aria-label={`Open fullscreen preview of ${shot.title}`}
                 className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-slate-800/90 bg-[#0B1120] text-left transition-colors duration-150 hover:border-sky-500/60 focus-visible:border-sky-400"
               >
@@ -116,7 +127,7 @@ export function ScreenshotsSection() {
                     alt={shot.alt}
                     width={shot.width}
                     height={shot.height}
-                    loading={idx < 5 ? 'eager' : 'lazy'}
+                    loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
                     className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
@@ -176,6 +187,7 @@ export function ScreenshotsSection() {
             </div>
 
             <button
+              ref={closeButtonRef}
               type="button"
               onClick={closeLightbox}
               aria-label="Close fullscreen preview"

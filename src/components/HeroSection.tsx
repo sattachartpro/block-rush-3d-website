@@ -120,6 +120,10 @@ export function HeroSection() {
                 <img
                   src={heroArtwork}
                   alt="Original 3D block promotional artwork for BLOCK RUSH 3D with illuminated electric blue and purple geometric blocks"
+                  width={1200}
+                  height={896}
+                  fetchPriority="high"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   onError={() => setImageError(true)}
                   className="h-full w-full min-h-[300px] object-cover lg:min-h-[420px]"

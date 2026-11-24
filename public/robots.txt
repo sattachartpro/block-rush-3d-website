@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sattachartpro.github.io/block-rush-3d-website/sitemap.xml

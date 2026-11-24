@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://sattachartpro.github.io/block-rush-3d-website/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261123_182012.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — Active 3D Gameplay</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261123_181916.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — Home Screen &amp; Modes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261123_182021.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — Run Summary &amp; Revive</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261123_181930.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — Arcade Missions</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261123_181942.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — 7-Day Daily Rewards</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261123_181952.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — Career Achievements</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261123_182001.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — Arcade Armory &amp; Themes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261123_182030.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — Runner Profile &amp; Stats</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261124_025056.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — 3D Block Stack Runner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sattachartpro.github.io/block-rush-3d-website/screenshots/IMG_20261124_025132.jpg</image:loc>
+      <image:title>BLOCK RUSH 3D — Progression Milestones</image:title>
+    </image:image>
+  </url>
+</urlset>
