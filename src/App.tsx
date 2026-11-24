@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { DownloadSection } from './components/DownloadSection';
+import { FaqSection } from './components/FaqSection';
 import { FeaturesSection } from './components/FeaturesSection';
 import { Footer } from './components/Footer';
 import { HeroSection } from './components/HeroSection';
@@ -37,6 +38,7 @@ export default function App() {
         <ScreenshotsSection />
         <DownloadSection />
         <InstallGuideSection />
+        <FaqSection />
         <SupportSection />
       </main>
 

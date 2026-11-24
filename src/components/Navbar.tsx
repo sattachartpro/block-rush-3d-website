@@ -12,6 +12,7 @@ const NAV_LINKS: NavLinkItem[] = [
   { label: 'Screenshots', href: '#screenshots' },
   { label: 'Download', href: '#download' },
   { label: 'Install Guide', href: '#install-guide' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Support', href: '#support' },
 ];
 
@@ -56,7 +57,7 @@ export function Navbar() {
         </a>
 
         {/* Zone 2: Concise single-line nav links */}
-        <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-7">
+        <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-5 lg:gap-7">
           {NAV_LINKS.map((item) => (
             <a
               key={item.href}
