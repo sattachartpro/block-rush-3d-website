@@ -9,6 +9,7 @@ interface NavLinkItem {
 
 const NAV_LINKS: NavLinkItem[] = [
   { label: 'Features', href: '#features' },
+  { label: 'How to Play', href: '#how-to-play' },
   { label: 'Screenshots', href: '#screenshots' },
   { label: 'Download', href: '#download' },
   { label: 'Install Guide', href: '#install-guide' },
@@ -57,7 +58,7 @@ export function Navbar() {
         </a>
 
         {/* Zone 2: Concise single-line nav links */}
-        <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-5 lg:gap-7">
+        <nav aria-label="Primary navigation" className="hidden lg:flex items-center gap-5 xl:gap-7">
           {NAV_LINKS.map((item) => (
             <a
               key={item.href}
@@ -92,7 +93,7 @@ export function Navbar() {
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation"
             aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/70 text-slate-200 transition-colors hover:border-slate-700 hover:text-white md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-800 bg-slate-900/70 text-slate-200 transition-colors hover:border-slate-700 hover:text-white lg:hidden"
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -104,7 +105,7 @@ export function Navbar() {
         <nav
           id="mobile-navigation"
           aria-label="Mobile navigation"
-          className="border-t border-slate-800/80 bg-[#080C17] px-4 py-4 md:hidden"
+          className="border-t border-slate-800/80 bg-[#080C17] px-4 py-4 lg:hidden"
         >
           <div className="flex flex-col gap-1">
             {NAV_LINKS.map((item) => (

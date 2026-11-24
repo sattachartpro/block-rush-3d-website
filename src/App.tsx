@@ -4,6 +4,7 @@ import { FaqSection } from './components/FaqSection';
 import { FeaturesSection } from './components/FeaturesSection';
 import { Footer } from './components/Footer';
 import { HeroSection } from './components/HeroSection';
+import { HowToPlaySection } from './components/HowToPlaySection';
 import { InstallGuideSection } from './components/InstallGuideSection';
 import { Navbar } from './components/Navbar';
 import { ScreenshotsSection } from './components/ScreenshotsSection';
@@ -35,6 +36,7 @@ export default function App() {
       <main id="main-content">
         <HeroSection />
         <FeaturesSection />
+        <HowToPlaySection />
         <ScreenshotsSection />
         <DownloadSection />
         <InstallGuideSection />
